@@ -2,6 +2,7 @@
 body {
     font-family: 'Geometria',sans-serif;
     text-align: center;
+    font-weight: 300;
 }
 .section {
     position: relative;
@@ -337,7 +338,6 @@ body {
     top: 5.4%;
     left:2.8646%;
     z-index: 1100;
-
     display: inline-block;
     cursor: pointer;
     transition-property: top, left;
@@ -734,8 +734,114 @@ body {
         margin: 0 auto;
         max-width: 320px;
         padding: 0 20px;
+        position: relative;
+        height: 100%;
+    }
+    .m-page-title-wc {
+        display: block;
+        text-align: left;
+        color: rgba(255,255,255,0.35);
+        padding-top: 30px;
+        font-size: 14px;
+        font-weight: 300;
+        letter-spacing: 0.05em;
+    }
+    .m-page-title-wc.white {
+        color: #9d9f98;
+    }
+    .m-page-title-wc .circle {
+        width: 46px;
+        height: 46px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.05);
+        text-align: center;
+    }
+    .m-page-title-wc.white .circle {
+        background: #f4f4f4;
+    }
+    .m-page-title-wc .circle span {
+        line-height: 46px;
+    }
+    .m-page-title-wc p, .m-page-title-wc span.di-block-m {
+        padding-right: 6px;
+    }
+    .m-page-title-wc .circle span.green {
+        color: rgba(8,241,183,0.35);
+    }
+    .m-scroll-arrow {
+        background: url("../img/m-scroll-arrow.png") no-repeat;
+        width: 69px;
+        height: 77px;
+        z-index: 10;
+
+        position: absolute;
+        bottom: 30px;
+        left:50%;
+        margin-left: -35px;
+    }
+    .m-scroll-arrow.white {
+        background: url("../img/m-scroll-arrow-white.png") no-repeat;
     }
 }
+
+.search-box {
+    position: fixed;
+    top: 5.4%;
+    left:6%;
+    z-index: 10;
+    display: inline-block;
+    cursor: pointer;
+    transition-property: top, left;
+    transition-duration: 300ms;
+    transition-delay: 300ms;
+    transition-timing-function:  cubic-bezier(0.645, 0.045, 0.355, 1);
+    font: inherit;
+    text-transform: none;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    overflow: visible;
+    width: 50px;
+    height: 50px;
+    color: #000000;
+}
+.search-box i {
+    font-size: 30px;
+    margin-top: -1px;
+}
+.nav-page-menu {
+    position: fixed;
+    top: 5.4%;
+    left:10.5%;
+    z-index: 10;
+    display: inline-block;
+    cursor: pointer;
+    transition-property: top, left;
+    transition-duration: 300ms;
+    transition-delay: 300ms;
+    transition-timing-function:  cubic-bezier(0.645, 0.045, 0.355, 1);
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    overflow: visible;
+    font-size: 16px;
+}
+.nav-page-menu a {
+    text-decoration: none;
+    color:#8c8f87;
+}
+.nav-page-menu span {
+    color:#0ad8a1;
+}
+.colorChng {
+    color:#ffffff;
+}
+
 
 /*===== EXCLUSIVE PAGE STYLES ======*/
 
@@ -744,6 +850,16 @@ body {
 #about-education {
     background-color: #171814;
 }
+#about-education .fp-bg {
+    background-image: url(../img/education1920.png);
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+#about-education .fp-bg h1 {
+    color:#ffffff;
+}
+
 
 /*------ END ОБРАЗОВАНИЕ ------*/
 
@@ -751,19 +867,43 @@ body {
 #about-competence {
     background-color: #ffffff;
 }
-
+#about-competence .fp-bg {
+    background-image: url(../img/competence1920.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
 /*------ END КОМПЕТЕНЦИИ ------*/
 
 /*------ ОПЫТ РАБОТЫ ------*/
 #about-experience {
     background-color: #ffffff;
 }
-
+#about-experience .fp-bg {
+    background-image: url(../img/experience1920.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
 /*------ END ОПЫТ РАБОТЫ ------*/
 
 /*------ ПРЕИМУЩЕСТВА работы со мной ------*/
 #about-advantages {
     background-color: #ffffff;
+}
+#about-advantages .fp-bg {
+    background-image: url(../img/advantages1920.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+#about-advantages .fp-bg h1 {
+    margin-top: 100px;
+    text-indent: 80px;
+}
+#about-advantages .fp-bg .text-block {
+    top: 6%;
+    left: 37%;
 }
 
 /*------ END ПРЕИМУЩЕСТВА ------*/
@@ -772,12 +912,144 @@ body {
 #about-characteristic {
     background-color: #171814;
 }
-
+#about-characteristic .fp-bg {
+    background-image: url(../img/characteristic1920.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+#about-characteristic .fp-bg h1 {
+    color:#ffffff;
+}
+#about-characteristic .fp-bg .text-block {
+    top: 11%;
+    left: 54%;
+    color:#ffffff;
+}
 /*------ END НЕПРОФИЛЬНЫЕ ------*/
 
 /*------ СЕРТИФИКАТЫ ------*/
 #about-certificates {
     background-color: #ffffff;
+}
+#about-certificates .fp-bg {
+    background-image: url(../img/certificates1920.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.folder-box {
+    width: 45%;
+    height: 50%;
+    margin:0 auto;
+    position: relative;
+}
+.folder-box a {
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    color:rgba(255,255,255,0.5);
+    width: 7%;
+    height: 15%;
+    background-image: url(../img/greyFolder.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-box-shadow: 10px 10px 30px -7px rgba(199,199,199,1);
+    -moz-box-shadow: 10px 10px 30px -7px rgba(199,199,199,1);
+    box-shadow: 10px 10px 30px -7px rgba(199,199,199,1);
+}
+.folder-box a i {
+    margin-top: 25%;
+    font-size: 40px;
+}
+.folder-box a:nth-child(1) {
+    top: 5%;
+    left: 0;
+}
+.folder-box a:nth-child(2) {
+    right: 0;
+    top: 30%;
+}
+.folder-box a:nth-child(3) {
+    bottom: 0;
+    left: 45%;
+}
+.folder-box a:nth-child(4) {
+    top: 40%;
+    left: 10%;
+}
+.folder-box a:nth-child(5) {
+    top: 45%;
+    left: 30%;
+}
+.folder-box a:nth-child(6) {
+    bottom: 30%;
+    left: 50%;
+}
+.folder-box a:nth-child(7) {
+    bottom: 40%;
+    left: 60%;
+}
+.folder-box a:nth-child(8) {
+    top: 30%;
+    left: 40%;
+}
+.folder-box a:hover {
+    background-image: url(../img/greenFolder.png);
+}
+.smallFolder-box {
+    width: 50%;
+    height: 30%;
+    margin:0 auto;
+    padding-top: 40px;
+    
+}
+.smallFolder-block {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.smallFolder-name {
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 26px;
+    color:#000;
+    margin-bottom: 60px;
+}
+.smallFolder-name span {
+    color:#00ebab;
+}
+.leftPart {
+    width: 45%;
+    height: 100%;
+    display: inline-block;
+    text-align: left;
+    padding-left: 30px;
+}
+.rightPart {
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+    text-align: left;
+    padding-left: 30px
+}
+.smallFolder-block p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    position: relative;
+}
+.smallFolder-block p:before {
+    content: '';
+    position: absolute;
+    width: 21px;
+    height: 31px;
+    background-image: url(../img/smallFolder.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    margin-right: 30px;
+    top: -5px;
+    left:-40px;
 }
 
 /*------ END СЕРТИФИКАТЫ ------*/
@@ -786,19 +1058,86 @@ body {
 #about-principles {
     background-color: #f8f9f8;
 }
-
+#about-principles .fp-bg {
+    background-image: url(../img/principles1920.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+#about-principles .text-box {
+    height: 27%;
+    width: 48%;
+    margin: 5% auto 0 auto;
+    padding: 30px 30px 0 30px;
+    font-size: 18px;
+}
+#about-principles .text-box p {
+    margin-bottom: 30px;
+}
+.upper {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.green {
+    color:#00ebab;
+}
 /*------ END ПРИНЦИПЫ РАБОТЫ ------*/
 
 /*------ В РАБОТЕ ------*/
 #about-worktype {
     background-color: #ffffff;
 }
-
+#about-worktype .fp-bg {
+    background-image: url(../img/worktype1920.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+#about-worktype .fp-bg h1 {
+    margin-top: 95px;
+    text-indent: 200px;
+}
+#about-worktype .fp-bg .text-block {
+    top: 6%;
+    left: 35%;
+}
+.text-block1 {
+    position: absolute;
+    top: 27%;
+    left: 52%;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 26px;
+}
+.text-block1 p {
+    display: inline-block;
+    letter-spacing: 2px;
+}
 /*------ END В РАБОТЕ ------*/
 
-
-
-
+.fp-bg h1 {
+    text-transform: uppercase;
+    font-size: 38px;
+    text-align: center;
+    margin-top: 3.5%;
+    font-weight: 300;
+    color:#000000;
+}
+.fp-bg .text-block {
+    position: absolute;
+    top: 78%;
+    left: 27%;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 26px;
+}
+.fp-bg .text-block p {
+    display: inline-block;
+    letter-spacing: 2px
+}
+p.green {
+    color:#00ebab;
+}
 
 
 
@@ -889,8 +1228,181 @@ footer .soc-bar a.soc-11 {
     position: absolute;
     width: 300px;
 }
+
+@media all and (max-width: 1440px) {
+    #about-principles .text-box {
+        height: 27%;
+        width: 48%;
+        padding: 30px 30px 0 30px;
+        font-size: 16px;
+    }
+    #about-principles .text-box p {
+        margin-bottom: 20px;
+    }
+
+    #about-characteristic .fp-bg h1 {
+        font-size: 34px;
+    }
+    .folder-box a i {
+        font-size: 36px;
+    }
+}
+@media all and (max-width: 1366px){
+    .smallFolder-name {
+        margin-bottom: 30px;
+    }
+    .smallFolder-block p {
+        margin-bottom: 15px;
+    }
+    #about-principles .text-box {
+        margin-top: 100px;
+    }
+    #about-principles .text-box p {
+        margin-bottom: 15px;
+    }
+    .folder-box a i {
+        font-size: 32px;
+    }
+}
+@media all and (max-width: 1280px) {
+    #about-characteristic .fp-bg h1 {
+        font-size: 30px;
+    }
+    #about-principles .text-box {
+        margin-top: 3%;
+    }
+}
+
 @media all and (max-width: 1024px){
-    
+    #about-education .fp-bg {
+        background-image: url(../img/education1024.png);
+    }
+    #about-competence .fp-bg {
+        background-image: url(../img/competence1024.png);
+    }
+    #about-experience .fp-bg {
+        background-image: url(../img/experience1024.png);
+    }
+    #about-advantages .fp-bg {
+        background-image: url(../img/advantages1024.png);
+    }
+    #about-characteristic .fp-bg {
+        background-image: url(../img/characteristic1024.png);
+    }
+    #about-certificates .fp-bg {
+        background-image: url(../img/certificates1024.png);
+    }
+    #about-principles .fp-bg {
+        background-image: url(../img/principles1024.png);
+    }
+    #about-worktype .fp-bg {
+        background-image: url(../img/worktype1024.png);
+    }
+    .fp-bg h1 {
+        font-size: 24px;
+        text-align: center;
+        margin-top: 5%;
+    }
+    #about-characteristic .fp-bg h1 {
+        font-size: 24px;
+    }
+    .search-box {
+        top: 5%;
+        left:7%;
+        width: 40px;
+        height: 40px;
+    }
+    .search-box i {
+        font-size: 20px;
+    }
+    .nav-page-menu {
+        top: 5.4%;
+        left:14%;
+        font-size: 14px;
+        letter-spacing: 1.5px;
+    }
+    .fp-bg .text-block {
+        font-size: 22px;
+        left: 7%;
+        top:69%;
+    }
+    #about-advantages .fp-bg .text-block {
+        top: 9%;
+        left: 30%;
+    }
+    #about-advantages .fp-bg h1 {
+        margin-top: 5.1%;
+        text-indent: 230px;
+    }
+    #about-characteristic h1 span {
+        display: none;
+    }
+    #about-characteristic h1 {
+        margin-right: 18%;
+    }
+    #about-characteristic .fp-bg .text-block {
+        top:53px;
+        left: 55%;
+    }
+    #about-principles .text-box {
+        width: 56%;
+        padding-top: 20px;
+        font-size: 14px;
+    }
+    .folder-box {
+        width: 47%;
+        height: 44%;
+    }
+    .folder-box a {
+        width: 33px;
+        height: 49px;
+    }
+    .folder-box a i {
+        font-size: 24px;
+    }
+    .smallFolder-box {
+        padding-top: 20px;
+        width: 65%;
+    }
+    .smallFolder-name {
+        font-size: 20px;
+    }
+    .leftPart, .rightPart {
+        padding-left: 15px;
+        padding-right: 20px;
+    }
+    .leftPart {
+        width: 54%;
+    }
+    .leftPart p {
+        margin-bottom: 33px;
+    }
+    .smallFolder-block p {
+        font-size: 14px;    
+    }
+    .smallFolder-block p:before {
+        width: 16px;
+        height: 26px;
+        background-size: 100%;
+        margin-right: 15px;
+        left:-25px;
+    }
+    #about-worktype .fp-bg .text-block {
+        top: 10%;
+        left: 17%;
+    }
+    #about-worktype .fp-bg h1 {
+        margin-top: 59px;
+        text-indent: 360px;
+    }
+    .text-block1 {
+        font-size: 18px;
+        top: 20%;
+        left: 47%;
+    }
+
+
+
     footer {
         height: 45px;
     }
@@ -907,6 +1419,105 @@ footer .soc-bar a.soc-11 {
 
 @media all and (max-width: 800px){
     
+    #about-education .fp-bg {
+        width: 100%;
+        height: 600px;
+        background-image: url(../img/education760.png);
+    }
+    #about-competence .fp-bg {
+        width: 100%;
+        height: 600px;
+        background-image: url(../img/competence760.png);
+    }
+    #about-experience .fp-bg {
+        width: 100%;
+        height: 600px;
+        background-image: url(../img/experience760.png);
+    }
+    #about-advantages .fp-bg {
+        width: 100%;
+        height: 600px;
+        background-image: url(../img/advantages760.png);
+    }
+    #about-characteristic .fp-bg {
+        width: 100%;
+        height: 600px;
+        background-image: url(../img/characteristic760.png);
+    }
+    #about-certificates .fp-bg {
+        width: 100%;
+        height: 600px;
+        background-image: url(../img/certificates760.png);
+    }
+    #about-principles .fp-bg {
+        width: 100%;
+        height: 600px;
+        background-image: url(../img/principles760.png);
+    }
+    #about-worktype .fp-bg {
+        width: 100%;
+        height: 600px;
+        background-image: url(../img/worktype760.png);
+    }
+    .fp-bg h1 {
+        margin-top: 0;
+        padding-top: 50px;
+        font-size: 22px;
+    }
+    .search-box {
+        top: 20px;   
+    }
+    .nav-page-menu {
+        top: 20px;
+    }
+    .fp-bg .text-block {
+        left: 25px;
+        bottom: 150px;
+        top:auto;
+    }
+    #about-advantages .fp-bg h1 {
+        margin: 0;
+        padding-top: 20px;
+    }
+    #about-advantages .fp-bg .text-block {
+        top: 20px;
+        left: 25%;
+    }
+    #about-characteristic .fp-bg h1 {
+        font-size: 22px;
+        margin-right: 30%;
+    }
+    #about-characteristic .fp-bg .text-block {
+        top: 50px;
+        left: 52%;
+        letter-spacing: 2px;    
+    }
+    .folder-box {
+        width: 65%;
+    }
+    .smallFolder-box {
+        width: 85%;
+        padding-top: 40px;
+    }
+    .smallFolder-name {
+        margin-bottom: 40px;
+    }
+    #about-principles .text-box {
+        margin-top: 40px;
+        width: 80%;
+    }
+    #about-principles .text-box p {
+        margin-bottom: 10px;
+    }
+    #about-worktype .fp-bg h1 {
+        margin-top: 0;
+        text-indent: 375px
+    }
+    #about-worktype .fp-bg .text-block {
+        top: 50px;
+        left: 68px;
+    }
+
     footer .soc-bar {
         padding-top: 14px;
     }
@@ -954,16 +1565,399 @@ footer .soc-bar a.soc-11 {
         background-position: -263px 0;
     }
 }
-@media all and (max-width: 750px){
-
+@media all and (max-width: 768px){
     
+    .fp-bg h1 {
+        margin-top: 0;
+        padding-top: 50px;
+        font-size: 22px;
+    }
+    .search-box {
+        top: 20px;   
+    }
+    .nav-page-menu {
+        top: 20px;
+    }
+    
+    #about-advantages .fp-bg h1 {
+        margin: 0;
+        padding-top: 20px;
+    }
+    #about-advantages .fp-bg .text-block {
+        top: 20px;
+        left: 25%;
+    }
+    #about-characteristic .fp-bg h1 {
+        font-size: 22px;
+        margin-right: 30%;
+    }
+    #about-characteristic .fp-bg .text-block {
+        top: 50px;
+        left: 52%;
+        letter-spacing: 2px;    
+    }
+    .folder-box {
+        width: 65%;
+    }
+    .smallFolder-box {
+        width: 85%;
+        padding-top: 40px;
+    }
+    .smallFolder-name {
+        margin-bottom: 40px;
+    }
+    #about-principles .text-box {
+        margin-top: 40px;
+        width: 80%;
+    }
+    #about-principles .text-box p {
+        margin-bottom: 10px;
+    }
+    #about-worktype .fp-bg h1 {
+        margin-top: 0;
+        text-indent: 375px
+    }
+    #about-worktype .fp-bg .text-block {
+        top: 50px;
+        left: 68px;
+    }
 }
 @media all and (max-width: 650px){
     
-    footer .soc-bar {
-        display: none;
+
+    .nav-page-menu {
+        left: 20%;
+    }
+    .search-box {
+        left: 10%;
+    }
+    #about-education .fp-bg {
+        width: 100%;
+        height: 800px;
+        background-image: url(../img/education500.png);
+        background-size: auto 100%;
+    }
+    #about-competence .fp-bg {
+        width: 100%;
+        height: 800px;
+        background-image: url(../img/competence500.png);
+        background-size: auto 100%;
+    }
+    #about-experience .fp-bg {
+        width: 100%;
+        height: 700px;
+        background-image: url(../img/experience500.png);
+        background-size: 100% 100%;
+    }
+    #about-advantages .fp-bg {
+        width: 100%;
+        height: 800px;
+        background-image: url(../img/advantages500.png);
+        background-size: auto 100%;
+    }
+    #about-characteristic .fp-bg {
+        width: 100%;
+        height: 630px;
+        background-image: url(../img/characteristic500.png);
+        background-size: auto 100%;
+    }
+    #about-certificates .fp-bg {
+        width: 100%;
+        height: 800px;
+        background-image: url(../img/certificates500.png);
+        background-size: 100% 100%;
+    }
+    #about-principles .fp-bg {
+        width: 100%;
+        height: 630px;
+        background-image: url(../img/principles500.png);
+        background-size: 100% 100%;
+    }
+    #about-worktype .fp-bg {
+        width: 100%;
+        height: 1000px;
+        background-image: url(../img/worktype500.png);
+        background-size: auto 100%;
+    }
+    .fp-bg h1 {
+        font-size: 26px;
+    }
+    .fp-bg .text-block {
+        left: 25%;
+        bottom: 34%;
+        top:auto;
+        font-size: 24px;
+    }
+    #about-advantages .fp-bg .text-block {
+        left: 30%;
+    }
+    #about-advantages .fp-bg h1 {
+        padding-top: 55px;
+        text-indent: 0;
+    }
+    #about-characteristic .fp-bg h1 span {
+        display: inline;
+    }
+    #about-characteristic .fp-bg h1 {
+        margin-right: 0;
+        margin-left: 30%;
+        text-align: left;
+        padding-top: 40px;
+    }
+    #about-characteristic .fp-bg .text-block {
+        top: 100px;
+        left: 45%;
+    }
+    #about-principles .fp-bg h1 {
+        width: 150px;
+        margin: 0 auto;
+        padding-top: 60px;
+    }
+    #about-principles .text-box {
+        width: 50%;
+        margin-top: 20px;
+    }
+    #about-principles .text-box p {
+        margin-bottom: 20px;
+    }
+    .text-block1 {
+        font-size: 20px;
+        top: 18%;
+        left: 32%;
+    }
+    #about-worktype .fp-bg .text-block {
+        left: 28%;
+        width: 150px;
+        top:30px;
+    }
+    #about-worktype .fp-bg h1 {
+        padding-top: 92px;
+        text-align: left;
+        text-indent: 0;
+        margin-left: 28%;
+        width: 150px;
+    }
+
+    footer {
+        height: 90px;
+    }
+    footer .wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    } 
+    .black {
+        background-image: url(../img/m-scroll-arrow-white.png);
     }
 }
-@media all and (max-width: 565px) {
-    
+@media all and (max-width: 500px) {
+    .lang-selection, .hamburger, .search-box {
+        position: absolute;
+
+    }
+    .nav-page-menu {
+        display: none;
+    }
+    .hamburger {
+        left: 22%;
+    }
+    .search-box {
+        top: 29px;
+        left: 32%;
+    }
+    .search-box i {
+        font-size: 24px;
+        color:#fff;
+    }
+    #about-education .fp-bg h1 {
+        padding-top: 90px;
+    }
+    #about-advantages .fp-bg .text-block {
+        left: 25%;
+    }
+    #about-characteristic .fp-bg h1 {
+        margin-left: 25%;
+    }
+    #about-certificates .fp-bg h1 {
+        padding-top: 90px;
+    }
+    .folder-box {
+        height: 35%;
+    }
+    .smallFolder-block {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 60%;
+        margin:0 auto;
+    }
+    .leftPart, .rightPart {
+        width: 100%;
+        padding: 0;
+    }
+    .leftPart p, .rightPart p {
+        margin-bottom: 20px;
+        text-align: left;
+        margin-right: 0;
+        
+    }
+    .smallFolder-block p:before {
+        width: 25px;
+        height: 35px;
+        left: -40px;
+        top: -10px;
+        background-size: 100% 100%;
+    }
+    #about-principles .text-box {
+        width: 56%;
+    }
+    footer .copyright {
+        width: 60%;
+        margin: 0 auto;
+        padding: 0;
+        overflow: visible;
+        line-height: 20px;
+        margin-top: 10px;
+    }
+}
+
+@media all and (max-width: 414px) {
+    .hamburger {
+        left: 20px;
+    }
+    .search-box {
+        left: 70px;
+    }
+    #about-experience .fp-bg {
+        height: 500px;
+    }
+    .fp-bg .text-block {
+        left: 7%;
+        font-size: 20px;
+        bottom: 170px;
+    }
+    #about-advantages .fp-bg .text-block {
+        left: 10%;
+    }
+    #about-advantages .fp-bg h1 {
+        padding-top: 45px;
+    }
+    #about-characteristic .fp-bg h1 {
+        margin-left: 20%;
+    }
+    #about-characteristic .fp-bg .text-block {
+        left: 28%;
+    }
+    .folder-box {
+        width: 85%;
+    }
+    .folder-box a:nth-child(8) {
+        top: 20%;
+    }
+    .folder-box a:nth-child(7) {
+        left: 68%;
+    }
+    .smallFolder-box {
+        width: 90%;
+    }
+    .leftPart p, .rightPart p {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .smallFolder-block p:before {
+        top: -2px;
+    }
+    .smallFolder-block {
+        width: 100%;
+        padding-left: 40px;
+    }
+    #about-principles .fp-bg {
+        background-size: cover;
+    }
+    #about-principles .text-box {
+        width: 80%;
+    }
+    #about-worktype .fp-bg .text-block {
+        left: 20px;
+        text-align: left;
+    }
+    #about-worktype .fp-bg h1 {
+        padding-top: 80px;
+        margin-left: 20px;
+    }
+    .text-block1 {
+        left: 20%;
+    }
+}
+
+
+
+@media all and (max-width: 360px)  {
+    .hamburger {
+        left: 20px;
+    }
+    .search-box {
+        left: 70px;
+    }
+    #about-experience .fp-bg {
+        height: 500px;
+    }
+    .fp-bg .text-block {
+        left: 7%;
+        font-size: 20px;
+        bottom: 170px;
+    }
+    #about-advantages .fp-bg .text-block {
+        left: 10%;
+    }
+    #about-advantages .fp-bg h1 {
+        padding-top: 45px;
+    }
+    #about-characteristic .fp-bg h1 {
+        margin-left: 10%;
+    }
+    #about-characteristic .fp-bg .text-block {
+        left: 28%;
+    }
+    .folder-box {
+        width: 85%;
+    }
+    .folder-box a:nth-child(8) {
+        top: 20%;
+    }
+    .folder-box a:nth-child(7) {
+        left: 68%;
+    }
+    .smallFolder-box {
+        width: 90%;
+    }
+    .leftPart p, .rightPart p {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .smallFolder-block p:before {
+        top: -2px;
+    }
+    .smallFolder-block {
+        width: 100%;
+        padding-left: 40px;
+    }
+    #about-principles .fp-bg {
+        background-size: cover;
+    }
+    #about-principles .text-box {
+        width: 95%;
+    }
+    #about-worktype .fp-bg .text-block {
+        left: 20px;
+        text-align: left;
+    }
+    #about-worktype .fp-bg h1 {
+        padding-top: 80px;
+        margin-left: 20px;
+    }
+    .text-block1 {
+        left: 10%;
+    }
 }

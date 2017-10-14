@@ -14,7 +14,9 @@
     <link href="js/magnific-popup.css" type="text/css" rel="stylesheet" />
     <link href="js/jquery.fullpage.min.css" type="text/css" rel="stylesheet" />
     <link href="js/iptools-jquery-offcanvas.css" type="text/css" rel="stylesheet" />
+    <link href="css/jquery.scrollbar.css" type="text/css" rel="stylesheet" />
     <link href="fonts/styles.css" type="text/css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" type="text/css" rel="stylesheet" />
     <link href="css/style.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
@@ -22,43 +24,99 @@
 <div id="fullpage">
     <div class="section" id="about-education">
         <div class="fp-bg">
-            
+            <h1>Образование</h1>
+            <a href="#about-competence" class="m-scroll-arrow"></a>
         </div>
     </div>
     <div class="section" id="about-competence">
 
         <div class="fp-bg">
-            
+            <h1>компетенции</h1>
+            <a href="#about-experience" class="m-scroll-arrow black"></a>
         </div>
     </div>
     <div class="section" id="about-experience">
         <div class="fp-bg">
-            
+            <h1>Опыт работы</h1>
+            <div class="text-block">
+                <p class="green">на данный</p>
+                <p class="black"> момент:</p>
+            </div>
+            <a href="#about-advantages" class="m-scroll-arrow black"></a>
         </div>
     </div>
     <div class="section" id="about-advantages">
         <div class="fp-bg">
-            
+            <h1>работы со мной</h1>
+            <div class="text-block">
+                преимущества
+            </div>
+
+            <a href="#about-characteristic" class="m-scroll-arrow black"></a>
         </div>
     </div>
     <div class="section" id="about-characteristic">
         <div class="fp-bg">
-            
+            <h1><span>непрофильные но </span>характеризующие</h1>
+            <div class="text-block">
+                преимущества
+            </div>
+            <a href="#about-certificates" class="m-scroll-arrow"></a>
         </div>
     </div>
     <div class="section" id="about-certificates">
         <div class="fp-bg">
-        
+            <h1>сертификаты</h1>
+            <div class="folder-box">
+                <a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a>
+            </div>
+            <div class="smallFolder-box">
+                <div class="smallFolder-name">
+                    другие <span>сертификаты</span>
+                </div>
+                <div class="smallFolder-block">
+                    <div class="leftPart">
+                        <p>По лицензированию продуктов Microsoft</p>
+                        <p>Специалист SAM (процедура управления активами ПО)</p>
+                    </div>
+                    <div class="rightPart">
+                        <p>Партнер Битрикс, администрирование CMS Битрикс</p>
+                        <p>Сертифицированный специалист по тендерам</p>
+                    </div>
+                </div>
+            </div>
+            <a href="#about-principles" class="m-scroll-arrow  black"></a>
         </div>
     </div>
     <div class="section" id="about-principles">
         <div class="fp-bg">
-        
+            <h1>принципы работы</h1>
+            <div class="text-box">
+                <p>Качественный веб-дизайн - это не красивая картинка, это </p>
+                <p><span class="upper">ГЛАВНЫЙ ИНСТРУМЕНТ ПРОДАЖ, РАБОТАЮЩИЙ <span class="green">СОВЕРШЕННО АВТОНОМНО</span></span></p>
+                <p>Вам не нужны менеджеры, хороший продукт или реклама, чтобы ваш товара/услуга продавались!</p>
+                <p>Если у вас есть качественный дизайн сайта - вопрос продаж уже решен, потому что он <span class="upper">ПРОДАЕТ</span> и делает это независимо от каких-то других факторов!</p>
+            </div>
+            <a href="#about-worktype" class="m-scroll-arrow black"></a>
         </div>
     </div>
     <div class="section" id="about-worktype">
         <div class="fp-bg">
-            
+            <div class="text-block">
+                особенности характера,
+            </div>
+            <h1>проявляющиеся в работе</h1>
+            <div class="text-block1">
+                <p class="black">типичный </p>
+                <p class="green">козерог</p>
+            </div>
         </div>
         <footer>
             <div class="wrapper">
@@ -114,7 +172,13 @@
             <div class="hamburger-inner"></div>
         </div>
     </div>
-
+    <div class="search-box">
+        <i class="fa fa-search" aria-hidden="true"></i>
+    </div>
+    <div class="nav-page-menu">
+        <a href="#">Главная / </a>
+        <span>Обо мне</span>
+    </div>
 </div>
 
 <div id="page-preloader">
@@ -128,6 +192,8 @@
 <script src="js/jquery.fullpage.extensions.min.js"></script>
 <script src="js/jquery.magnific-popup.min.js"></script>
 <script src="js/iptools-jquery-offcanvas.min.js"></script>
+<script src="js/jquery.smooth-scroll.js"></script>
+<script src="js/jquery.scrollbar.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

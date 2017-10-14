@@ -7,26 +7,18 @@ $(window).on('load', function () {
 
 $("document").ready(function(){
 
-    /*$('.open-popup-link').magnificPopup({
-        type:'inline',
-        midClick: true,
-        removalDelay: 300,
-        mainClass: 'my-mfp-zoom-in'
-    });
+    $('a.m-scroll-arrow').smoothScroll();
 
-    $('.main-slider').slick({
-        autoplay:true,
-        infinite:false
-    });*/
+    $('.scrollbar-outer').scrollbar();
 
     if(window.innerWidth > 800) {
         $('#fullpage').fullpage({
             scrollingSpeed: 700,
             responsiveWidth:800,
             easingcss3: 'ease-in',
-            scrollBar: true,
+            scrollBar: false,
             scrollOverflow: false,
-            parallax: false,
+            parallax: true,
             parallaxKey: '',
             parallaxOptions: {
                 type: 'reveal',
@@ -34,7 +26,7 @@ $("document").ready(function(){
             },
             fitToSection:false,
             lockAnchors: false,
-            anchors:['education','competence','experience','advantages','characteristic','certificates','principles','worktype'],
+            anchors:['education','competence','experience','advantages','characteristic','certificates','principles', 'worktype'],
             navigation: true,
             navigationPosition: 'right',
             showActiveTooltip: false,
@@ -48,56 +40,65 @@ $("document").ready(function(){
                         $('.page-title').removeClass('animated');
                     }
                 }
-                if(window.location.hash === '#competence' || window.location.hash === '#experience' || window.location.hash === '#advantages' || window.location.hash === '#certificates' || window.location.hash === '#worktype') {
-                
+                if(window.location.hash === '#competence' || window.location.hash === '#advantages' || window.location.hash === '#advantages'  || window.location.hash === '#certificates' || window.location.hash === '#principles' || window.location.hash === '#worktype') {
+                    
                     $('.out-fp-content, #fp-nav').removeClass('white');
+                    $('.search-box').removeClass('colorChng');
                 }
+               
 
             },
             afterLoad: function(anchorLink, index, slideAnchor, slideIndex) {
                 if (anchorLink == 'education') {
-                    $('.out-fp-content, #fp-nav').addClass('animated');
+                    $('.out-fp-content, #fp-nav, .search-box').addClass('animated');
+                    $('.search-box').addClass('colorChng');
                 } else {
-                    $('.out-fp-content, #fp-nav').addClass('fast-animated');
+                    $('.out-fp-content, #fp-nav, .search-box').addClass('fast-animated');
                 }
 
                 $('.fp-section.fp-completely').addClass('animated');
 
 
-
                 if (anchorLink == 'competence') {
                     $('.out-fp-content, #fp-nav').addClass('white');
-
+                    $('.search-box').removeClass('colorChng');
+                    
                 }
-            
-                if (anchorLink === 'experience') {
+                if (anchorLink == 'experience') {
                     $('.out-fp-content, #fp-nav').addClass('white');
-
+                    $('.search-box').removeClass('colorChng');
                 }
                 if (anchorLink == 'advantages') {
                     $('.out-fp-content, #fp-nav').addClass('white');
-                
+                   $('.search-box').removeClass('colorChng');
+
                 }
-                /*if (anchorLink == 'characteristic') {
-                    $('.out-fp-content, #fp-nav').addClass('white');
-                
-                }*/
+                if (anchorLink === 'characteristic') {
+                    $('.search-box').addClass('colorChng');
+                    
+                }
                 if (anchorLink == 'certificates') {
                     $('.out-fp-content, #fp-nav').addClass('white');
-                
+                    $('.search-box').removeClass('colorChng');
+                    
                 }
                 if (anchorLink == 'principles') {
                     $('.out-fp-content, #fp-nav').addClass('white');
-                
+                    $('.search-box').removeClass('colorChng');
+                    
                 }
-                
                 if (anchorLink == 'worktype') {
+                    $('.search-box').removeClass('colorChng');
                     $('.out-fp-content, #fp-nav').addClass('white');
 
+                    
 
                     $('.scroll-arrow').hide();
                 } else {
                     $('.scroll-arrow').show();
+                }
+                if(anchorLink !== 'welcome'){
+                    $('.page-title').addClass('animated');
                 }
             }
         });
@@ -109,19 +110,43 @@ $("document").ready(function(){
         $(window).on('resize scroll', function() {
             var hamburger_h = $('.hamburger').height();
             var hamburger_t = $('.hamburger').offset().top + hamburger_h;
-            var white_h_1 = $('#main-difference').height();
-            var white_t_1 = $('#main-difference').offset().top;
-            if(hamburger_t > white_t_1) {
+
+            var white_h_1 = $('#about-competence').height();
+            var white_t_1 = $('#about-competence').offset().top;
+
+            var white_h_2 = $('#about-experience').height();
+            var white_t_2 = $('#about-experience').offset().top;
+
+            var white_h_3 = $('#about-advantages').height();
+            var white_t_3 = $('#about-advantages').offset().top;
+
+            var white_h_4 = $('#about-certificates').height();
+            var white_t_4 = $('#about-certificates').offset().top;
+
+            var white_h_5 = $('#about-principles').height();
+            var white_t_5 = $('#about-principles').offset().top;
+
+            var white_h_6 = $('#about-worktype').height();
+            var white_t_6 = $('#about-worktype').offset().top;
+
+            if(
+                (hamburger_t >= white_t_1 && hamburger_t < (white_t_1+white_h_1)) ||
+                (hamburger_t >= white_t_2 && hamburger_t < (white_t_2+white_h_2)) ||
+                (hamburger_t >= white_t_3 && hamburger_t < (white_t_3+white_h_3)) ||
+                (hamburger_t >= white_t_4 && hamburger_t < (white_t_4+white_h_4)) ||
+                (hamburger_t >= white_t_5 && hamburger_t < (white_t_5+white_h_5)) ||
+                (hamburger_t >= white_t_6 && hamburger_t < (white_t_6+white_h_6))) {
                 $('.out-fp-content').addClass('white');
+                $('.search-box').removeClass('colorChng');
             }
-            if(hamburger_t > (white_t_1 + white_h_1) || hamburger_t <= white_t_1){
+
+             else {
                 $('.out-fp-content').removeClass('white');
+                $('.search-box').addClass('colorChng');
             }
+
         });
     }
-
-
-
 
     $('#nav-menu').iptOffCanvas({
         baseClass: 'offcanvas',
@@ -143,6 +168,7 @@ $("document").ready(function(){
     $('.hamburger').click(function () {
         $('#nav-menu').data('plugin_iptOffCanvas').toggle();
     });
+
 
 
 });
